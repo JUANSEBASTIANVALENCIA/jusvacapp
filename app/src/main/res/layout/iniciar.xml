@@ -10,41 +10,17 @@
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="300dp"
-        android:layout_height="180dp"
-       android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintVertical_bias="0.036"
         app:srcCompat="@drawable/logo_jusvac_oficial" />
 
-
-    <ImageView
-        android:id="@+id/imagenDocs"
-        android:layout_width="410dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/doctores_jusvac" />
-
-
-    <ImageView
-        android:id="@+id/imagenArcoBlanco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:srcCompat="@drawable/arco_b1" />
 
     <TextView
         android:id="@+id/txtViewSalud"
@@ -55,10 +31,12 @@
         android:textColor="@color/color_fondo"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imagenArcoBlanco"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewViva"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtViewViva"
@@ -68,19 +46,19 @@
         android:text="¡Viva esta experiencia con nosotros!"
         android:textColor="@color/color_fondo"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnIniciarE"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenDocs"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.671" />
 
     <Button
         android:id="@+id/btnIniciarE"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="52dp"
         android:backgroundTint="@color/color_fondo"
         android:text="Iniciar Experiencia"
         android:textColor="@color/md_theme_background"
@@ -89,8 +67,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenDocs"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewViva"
         app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="414dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

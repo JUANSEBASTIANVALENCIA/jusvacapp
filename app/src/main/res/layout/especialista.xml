@@ -4,36 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_registro">
+    android:background="@drawable/fondo_especialistas_uno">
 
     <ImageView
-        android:id="@+id/imagenLogo"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:id="@+id/imagenFotoPerfil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/foto_perfil_jusvac" />
+
+    <TextView
+        android:id="@+id/txtViewEspecialista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
+        android:text="Especialista"
+        android:textColor="@color/color_fondo"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04"
-        app:srcCompat="@drawable/logo_jusvac_oficial" />
+        app:layout_constraintVertical_bias="0.383" />
 
     <TextView
-        android:id="@+id/txtViewSalud"
+        android:id="@+id/txtViewDatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Ingrese sus datos"
-        android:textColor="@color/blanco"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtFieldNombre"
+        android:text="Datos personales del paciente:"
+        android:textColor="@color/color_fondo"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEspecialista"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtFieldNombre"
@@ -41,18 +55,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:gravity="top|start"
+        android:gravity="center"
         android:hint="Nombre completo del paciente"
-        android:inputType="textMultiLine"
-        android:maxLines="5"
-        android:minLines="1"
         android:textColorHint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="0.243">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewDatos"
+        app:layout_constraintVertical_bias="0.052">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
@@ -61,20 +72,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldCorreo"
+        android:id="@+id/txtFieldUbicacion"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:hint="Correo electrónico"
+        android:hint="Ubicación del paciente"
         android:textColorHint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFieldNombre"
-        app:layout_constraintVertical_bias="0.055">
+        app:layout_constraintVertical_bias="0.019">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
@@ -83,20 +95,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldCedula"
+        android:id="@+id/txtFieldTelefono"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:hint="Cédula ciudadanía"
+        android:hint="Teléfono del paciente"
         android:textColorHint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldCorreo"
-        app:layout_constraintVertical_bias="0.055">
+        app:layout_constraintTop_toBottomOf="@+id/txtFieldUbicacion"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
@@ -104,45 +117,14 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldContrasena"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="center"
-        android:hint="Contraseña"
-        android:textColorHint="@color/color_fondo"
-        app:endIconMode="password_toggle"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldCedula"
-        app:layout_constraintVertical_bias="0.117">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
-            android:layout_height="match_parent" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btnRegistrarse"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_fondo"
-        android:gravity="center"
-        android:text="Registrarse"
-        android:textColor="@color/blanco"
-        android:textColorLink="#FFFFFF"
-        app:iconTint="@color/color_fondo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldContrasena"
-        app:layout_constraintVertical_bias="0.150" />
+        app:layout_constraintStart_toEndOf="@+id/txtFieldTelefono"
+        app:layout_constraintTop_toTopOf="@+id/txtFieldTelefono"
+        app:srcCompat="@drawable/flecha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,13 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".IniciarSesionActivity" />
+        <activity android:name=".RegistroActivity"/>
+        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".ConsultaMedicaUnoActivity"/>
+        <activity android:name=".EspecialistaUnoActivity"/>
+
     </application>
 
 </manifest>

@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     android:background="@drawable/fondo_iniciar_sesion">
+
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="270dp"
-        android:layout_height="180dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,8 +21,9 @@
         app:layout_constraintVertical_bias="0.04"
         app:srcCompat="@drawable/logo_jusvac_oficial" />
 
+
     <TextView
-        android:id="@+id/txtViewSalud"
+        android:id="@+id/txtViewIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -27,37 +31,27 @@
         android:textColor="@color/blanco"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imagenArcoAzul"
+        app:layout_constraintBottom_toTopOf="@+id/txtFieldCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imagenArcoAzul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="0.136"
-        app:srcCompat="@drawable/arco_az2" />
+        app:layout_constraintVertical_bias="0.257" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldCorreo"
-        android:layout_width="match_parent"
+        android:id="@+id/txtFieldCorreo"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Correo electronico"
-        android:textColorHint="@color/color_fondo"
         android:gravity="center"
+        android:hint="Correo electrónico"
+        android:textColorHint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imagenLogo">
+        app:layout_constraintTop_toTopOf="@+id/imagenLogo"
+        app:layout_constraintVertical_bias="0.467">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
@@ -67,17 +61,20 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldContrasena"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:hint="Contraseña"
         android:textColorHint="@color/color_fondo"
+        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewSalud">
+        app:layout_constraintTop_toBottomOf="@+id/txtFieldCorreo"
+        app:layout_constraintVertical_bias="0.08">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"
@@ -85,22 +82,70 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
-        android:id="@+id/btnIniciarE"
+        android:id="@+id/btnIngresar"
         style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
         android:backgroundTint="@color/color_fondo"
+        android:gravity="center"
         android:text="Ingresar"
-        android:textColor="@color/md_theme_background"
+        android:textColor="@color/blanco"
         android:textColorLink="#FFFFFF"
         app:iconTint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFieldContrasena"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintVertical_bias="0.098" />
+
+    <TextView
+        android:id="@+id/edtxtOlvidóCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="¿Olvidó su contraseña?"
+        android:textColor="@color/color_fondo"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <Button
+        android:id="@+id/btnIniciarGoogle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_fondo"
+        android:drawableStart="@drawable/google_logo"
+        android:gravity="center"
+        android:text="Iniciar con Google"
+        android:textColor="@color/blanco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxtOlvidóCon"
+        app:layout_constraintVertical_bias="0.134" /> <!-- Asegúrate de tener un logo de Google en drawable -->/>
+
+    <TextView
+        android:id="@+id/txtEresNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Eres nuevo? Regístrate"
+        android:textColor="@color/color_fondo"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarGoogle"
+        app:layout_constraintVertical_bias="0.22" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
