@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/fondo_iniciar">
+    android:background="@color/color_fondo"
+    android:orientation="vertical">
 
 
     <ImageView
@@ -22,10 +22,34 @@
         app:srcCompat="@drawable/logo_jusvac_oficial" />
 
 
+    <ImageView
+        android:id="@+id/imagenDocs"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginBottom="-100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
+        app:srcCompat="@drawable/doctores_jusvac" />
+
+    <ImageView
+        android:id="@+id/imagenArcoBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-200dp"
+        android:layout_marginBottom="-200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fondo_inferiror" />
+
     <TextView
         android:id="@+id/txtViewSalud"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Salud domiciliaria siempre para tí"
         android:textColor="@color/color_fondo"
@@ -35,23 +59,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenDocs" />
 
     <TextView
         android:id="@+id/txtViewViva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="¡Viva esta experiencia con nosotros!"
         android:textColor="@color/color_fondo"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintBottom_toTopOf="@+id/btnIniciarE"
+        app:layout_constraintEnd_toEndOf="@+id/txtViewSalud"
+        app:layout_constraintStart_toStartOf="@+id/txtViewSalud"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewSalud" />
 
     <Button
         android:id="@+id/btnIniciarE"
@@ -64,7 +86,7 @@
         android:textColor="@color/md_theme_background"
         android:textColorLink="#FFFFFF"
         app:iconTint="@color/color_fondo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtViewViva"
@@ -75,7 +97,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="414dp" />
+        app:layout_constraintGuide_percent="0.94" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
