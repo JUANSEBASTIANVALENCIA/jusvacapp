@@ -4,27 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_consulta_medica_dos">
-
-    <ImageView
-        android:id="@+id/imagenFotoPerfil"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045"
-        app:srcCompat="@drawable/foto_perfil_jusvac" />
+    android:background="@drawable/fondo_enfermeria_dos">
 
     <TextView
         android:id="@+id/txtViewConsultaMedica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="300dp"
         android:gravity="center"
-        android:text="Consulta médica"
+        android:text="Enfermería"
         android:textColor="@color/color_fondo"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -32,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtViewPrediagnostico"
@@ -45,10 +33,9 @@
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtFieldNombre"
@@ -56,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="276dp"
         android:gravity="top|start"
         android:hint="Sintomas del paciente"
         android:inputType="textMultiLine"
@@ -68,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtViewPrediagnostico"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.75">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="300dp"

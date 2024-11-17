@@ -118,13 +118,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/imageFlecha"
+        android:layout_width="54dp"
+        android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtFieldTelefono"
-        app:layout_constraintTop_toTopOf="@+id/txtFieldTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/txtFieldTelefono"
         app:srcCompat="@drawable/flecha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

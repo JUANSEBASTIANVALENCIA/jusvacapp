@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/foto_perfil_jusvac" />
 
     <TextView
-        android:id="@+id/txtViewViva"
+        android:id="@+id/txtJuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -32,35 +32,69 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imagenLogo"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtViewServicios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.843"
+        app:srcCompat="@drawable/logo_jusvac_oficial" />
+
     <TextView
-        android:id="@+id/txtViewConsultaMedica"
+        android:id="@+id/txtViewServicios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Consulta médica"
-        android:textColor="@color/color_fondo"
+        android:text="Selecciona el servicio que desees"
+        android:textColor="@color/blanco"
         android:textSize="30sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/imageConsultaMedica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJuan"
+        app:layout_constraintVertical_bias="0.796" />
+
+    <ImageView
+        android:id="@+id/imageConsultaMedica"
+        android:layout_width="309dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintVertical_bias="0.595"
+        app:srcCompat="@drawable/barra_consulta" />
 
-    <TextView
-        android:id="@+id/txtViewEspecialista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Especialista"
-        android:textColor="@color/color_fondo"
-        android:textSize="30sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageEnfermeria"
+        android:layout_width="305dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.706"
+        app:srcCompat="@drawable/barra_enfermeria" />
+
+    <ImageView
+        android:id="@+id/imageEspecialista"
+        android:layout_width="309dp"
+        android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewConsultaMedica"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818"
+        app:srcCompat="@drawable/barra_especialista" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

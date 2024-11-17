@@ -11,11 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class ConsultaMedicaUnoActivity : AppCompatActivity() {
+class EnfermeriaUnoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.consulta_medica)
+        setContentView(R.layout.enfermeria)
 
         val txtFieldTelefono = findViewById<TextInputLayout>(R.id.txtFieldTelefono)
         val imageFlecha = findViewById<ImageView>(R.id.imageFlecha)
@@ -43,7 +43,7 @@ class ConsultaMedicaUnoActivity : AppCompatActivity() {
         imageFlecha.setOnClickListener {
 
             Toast.makeText(this, "¡¡Agendate segùn tus comodidades!!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,  ConsultaMedicaDosActivity::class.java) // Cambiado a IniciarSesionActivity
+            val intent = Intent(this, EnfermeriaDosActivity::class.java) // Cambiado a IniciarSesionActivity
             startActivity(intent)
         }
     }
