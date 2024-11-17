@@ -9,6 +9,7 @@ import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -43,7 +44,12 @@ class ConsultaMedicaDosActivity : AppCompatActivity() {
             datePicker.addOnPositiveButtonClickListener { selection ->
                 val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
                 val selectedDate = sdf.format(Date(selection))
-                tvSelectedDate.text = "Fecha seleccionada: $selectedDate"
+                val calendar = Calendar.getInstance()
+                calendar.time = sdf.parse(selectedDate)
+                calendar.add(Calendar.DAY_OF_MONTH, 1)
+                val newDate = sdf.format(calendar.time)
+
+                tvSelectedDate.text = "Fecha seleccionada: $newDate"
             }
         }
     }
