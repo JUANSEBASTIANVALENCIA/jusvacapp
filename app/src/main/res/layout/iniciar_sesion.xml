@@ -8,6 +8,18 @@
     android:gravity="center"
     android:background="@drawable/fondo_iniciar_sesion">
 
+    <ProgressBar
+        android:id="@+id/pg_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:tooltipText="Cargando mensajes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <ImageView
         android:id="@+id/imagenLogo"
@@ -54,9 +66,10 @@
         app:layout_constraintVertical_bias="0.467">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCorreo"
             android:layout_width="300dp"
             android:layout_height="match_parent" />
-
+        <requestFocus />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -77,6 +90,7 @@
         app:layout_constraintVertical_bias="0.08">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
             android:layout_width="300dp"
             android:layout_height="match_parent" />
 
