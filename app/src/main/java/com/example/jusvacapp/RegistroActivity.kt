@@ -22,10 +22,18 @@ class RegistroActivity: AppCompatActivity() {
 
         val txtFieldCedula = findViewById<TextInputLayout>(R.id.txtFieldCedula)
         val editTextCedula = txtFieldCedula.editText as TextInputEditText
+        val btnRegistrarte = findViewById<Button>(R.id.btnRegistrarse)
 
 
         editTextCedula.filters = arrayOf(InputFilter.LengthFilter(10))
 
+
+
+        btnRegistrarte.setOnClickListener {
+            Toast.makeText(this, "Bienvenido a nuestra App!!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, PrincipalActivity::class.java)
+            startActivity(intent)
+        }
 
         editTextCedula.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
