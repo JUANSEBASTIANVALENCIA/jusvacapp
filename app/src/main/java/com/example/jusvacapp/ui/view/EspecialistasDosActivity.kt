@@ -1,13 +1,11 @@
-package com.example.jusvacapp
+package com.example.jusvacapp.ui.view
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jusvacapp.R
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import java.text.SimpleDateFormat
@@ -15,7 +13,7 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-class EnfermeriaDosActivity : AppCompatActivity() {
+class EspecialistasDosActivity : AppCompatActivity() {
 
     private lateinit var tvSelectedDate: TextView
     private lateinit var btnSelectDate: MaterialButton
@@ -24,7 +22,7 @@ class EnfermeriaDosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.enfermeria_dos)
+        setContentView(R.layout.especialista_dos)
 
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
         btnSelectDate = findViewById(R.id.btnSelectDate)

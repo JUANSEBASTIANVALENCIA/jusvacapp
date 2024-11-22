@@ -15,11 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-        <meta-data
-        android:name="preloaded_fonts"
-        android:resource="@array/preloaded_fonts" />
-
-        <activity android:name=".ui.view.IniciarSesionActivity"
+        <activity
+            android:name=".ui.view.PrimeraPantallaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,18 +24,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.view.IniciarSesionActivity"
             android:exported="false" />
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".PrincipalActivity" />
-        <activity android:name=".ConsultaMedicaUnoActivity" />
-        <activity android:name=".ConsultaMedicaDosActivity" />
-        <activity android:name=".EnfermeriaUnoActivity" />
-        <activity android:name=".EnfermeriaDosActivity" />
-        <activity android:name=".EspecialistaUnoActivity" />
-        <activity android:name=".EspecialistasDosActivity" />
+        <activity android:name=".ui.view.RegistroActivity"
+            android:exported="false" />
+        <activity android:name=".ui.view.PrincipalActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.ConsultaMedicaUnoActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.ConsultaMedicaDosActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.EnfermeriaUnoActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.EnfermeriaDosActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.EspecialistaUnoActivity"
+            android:exported="false"/>
+        <activity android:name=".ui.view.EspecialistasDosActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

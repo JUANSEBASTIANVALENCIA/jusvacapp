@@ -1,12 +1,12 @@
-package com.example.jusvacapp
+package com.example.jusvacapp.ui.view
 
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.jusvacapp.R
 
 class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

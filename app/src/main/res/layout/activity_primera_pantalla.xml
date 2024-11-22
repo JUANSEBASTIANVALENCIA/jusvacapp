@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_iniciar"
-    android:orientation="vertical">
+    tools:context=".ui.view.PrimeraPantallaActivity">
 
 
     <ImageView
@@ -37,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/txtJuan"
@@ -50,10 +51,9 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txtViewSalud"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="@+id/txtViewSalud"
         app:layout_constraintTop_toBottomOf="@+id/txtViewSalud"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <Button
         android:id="@+id/btnIniciarE"
@@ -74,8 +74,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-

@@ -2,16 +2,13 @@ package com.example.jusvacapp.ui.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
-import com.example.jusvacapp.PrincipalActivity
 import com.example.jusvacapp.R
-import com.example.jusvacapp.RegistroActivity
 import com.example.jusvacapp.data.dto.LoginDTO
 import com.example.jusvacapp.data.utils.Utils
 import com.example.jusvacapp.databinding.IniciarSesionBinding
