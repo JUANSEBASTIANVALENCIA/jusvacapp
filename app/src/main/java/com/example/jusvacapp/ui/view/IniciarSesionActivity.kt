@@ -26,6 +26,9 @@ class IniciarSesionActivity : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // NO VA AQUIIIIIII
+        loginViewModel.getConsultas()
+
         val txtEresNUevo = findViewById<TextView>(R.id.txtEresNuevo)
         // Seccion de observadores
         loginViewModel.isLoading.observe(this, Observer {
