@@ -20,6 +20,7 @@ class LoginViewModel : ViewModel() {
     private val postLoginUseCase = PostLoginUseCase()
     private val getConsultasMedicasUseCase = GetConsultasMedicasUseCase()
 
+
     fun login(loginDTO: LoginDTO) {
         viewModelScope.launch {
             isLoading.postValue(true)
@@ -57,5 +58,6 @@ class LoginViewModel : ViewModel() {
             }
         }
     }
+
 
 }

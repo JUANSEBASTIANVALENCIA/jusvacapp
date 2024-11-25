@@ -2,93 +2,116 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_consulta_medica_dos">
-
-    <ImageView
-        android:id="@+id/imagenFotoPerfil"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045"
-        app:srcCompat="@drawable/foto_perfil_jusvac" />
+    tools:context=".ui.view.ListaActivity"
+    android:background="@drawable/fondo_consulta_lista">
 
     <TextView
         android:id="@+id/txtViewConsultaMedica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
         android:gravity="center"
-        android:text="Consulta médica"
+        android:text="Lista Consulta"
         android:textColor="@color/color_fondo"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPrediagnostico"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
-
-    <TextView
-        android:id="@+id/txtViewPrediagnostico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Prediagnostico del paciente"
-        android:textColor="@color/color_fondo"
-        android:textSize="25sp"
-        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtFieldNombre"
-        android:layout_width="300dp"
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="292dp"
-        android:gravity="top|start"
-        android:hint="Sintomas del paciente"
-        android:inputType="textMultiLine"
-        android:maxLines="5"
-        android:minLines="1"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/color_fondo"
         android:textColorHint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewPrediagnostico"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="300dp"
-            android:layout_height="match_parent" />
-
+            android:id="@+id/editTextNombrePaciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del paciente"
+            android:inputType="textPersonName"
+            android:textColor="@color/color_fondo" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateInputLayout"
-        android:layout_width="300dp"
+        android:id="@+id/textInputLayoutUbicacion"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:textColorHint="@color/color_fondo"
         app:boxStrokeWidth="2dp"
-        app:endIconMode="custom"
+        app:endIconMode="clear_text"
+        app:hintTextColor="@color/color_fondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación del paciente"
+            android:inputType="textPersonName"
+            android:textColor="@color/color_fondo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColorHint="@color/color_fondo"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="clear_text"
         app:hintTextColor="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFieldNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUbicacion"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefono del paciente"
+            android:inputType="number"
+            android:textColor="@color/color_fondo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="custom"
+        app:hintTextColor="@color/color_fondo"
+        android:textColorHint="@color/color_fondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTelefono"
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -102,7 +125,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/timeInputLayout"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:boxStrokeWidth="2dp"
@@ -124,37 +147,38 @@
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAgendar"
+    <Button
+        android:id="@+id/btnGuardar"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/color_fondo"
-        android:text="Agendar"
-        android:textColor="@color/blanco"
+        android:text="Guardar"
+        android:textColor="@color/md_theme_background"
         android:textColorLink="#FFFFFF"
+        app:iconTint="@color/color_fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeInputLayout"
-        app:layout_constraintVertical_bias="0.471" />
+        app:layout_constraintVertical_bias="0.333" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnActualizar"
+    <Button
+        android:id="@+id/btnEliminar"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/amarillo"
-        android:text="Actualizar"
-        android:textColor="@color/md_theme_scrim"
+        android:backgroundTint="@color/md_theme_error"
+        android:text="Eliminar"
+        android:textColor="@color/md_theme_background"
         android:textColorLink="#FFFFFF"
+        app:iconTint="@color/md_theme_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeInputLayout"
-        app:layout_constraintVertical_bias="0.471" />
-
+        app:layout_constraintVertical_bias="0.333" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

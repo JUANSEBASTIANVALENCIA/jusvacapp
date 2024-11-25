@@ -1,4 +1,5 @@
 <resources>
+    <color name="amarillo">#f4cd34</color>
     <color name="color_fondo">#0097B2</color>
     <color name="blanco">#FFFFFF</color>
     <color name="md_theme_primary">#00687B</color>

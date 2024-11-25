@@ -28,22 +28,34 @@
         <activity
             android:name=".ui.view.IniciarSesionActivity"
             android:exported="false" />
-        <activity android:name=".ui.view.RegistroActivity"
+        <activity
+            android:name=".ui.view.RegistroActivity"
             android:exported="false" />
-        <activity android:name=".ui.view.PrincipalActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.ConsultaMedicaUnoActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.ConsultaMedicaDosActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.EnfermeriaUnoActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.EnfermeriaDosActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.EspecialistaUnoActivity"
-            android:exported="false"/>
-        <activity android:name=".ui.view.EspecialistasDosActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".ui.view.PrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.ConsultaMedicaUnoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.ConsultaMedicaDosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.EnfermeriaUnoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.EnfermeriaDosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.EspecialistaUnoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.EspecialistasDosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.ListaActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

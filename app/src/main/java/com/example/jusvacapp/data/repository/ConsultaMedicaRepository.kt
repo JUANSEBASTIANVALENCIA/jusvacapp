@@ -20,4 +20,28 @@ class ConsultaMedicaRepository {
         }
         return response
     }
+
+    suspend fun postConsultas(): DataResponseLocalModel<ConsultaMedicaModel> {
+        val response = consultaMedicaApiService.postConsultas()
+        if(response.status == "success"){
+            ConsultaMedicaProvider.consultaMedicaList = response.data
+        }
+        return response
+    }
+
+    suspend fun putConsultas(): DataResponseLocalModel<ConsultaMedicaModel> {
+        val response = consultaMedicaApiService.putConsultas()
+        if(response.status == "success"){
+            ConsultaMedicaProvider.consultaMedicaList = response.data
+        }
+        return response
+    }
+
+    suspend fun deleteConsultas(): DataResponseLocalModel<ConsultaMedicaModel> {
+        val response = consultaMedicaApiService.deleteConsultas()
+        if(response.status == "success"){
+            ConsultaMedicaProvider.consultaMedicaList = response.data
+        }
+        return response
+    }
 }
